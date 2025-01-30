@@ -19,6 +19,9 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
+a{
+    color: var(--color-text);
+}
 
 .container {
     max-width: 1200px;
@@ -107,3 +110,4 @@ ul li:hover {
         transform: translateY(-10px);
     }
 }
+
