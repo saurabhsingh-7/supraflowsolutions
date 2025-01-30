@@ -1,0 +1,109 @@
+:root {
+    --color-1: hsla(345, 93%, 44%, 1);
+    --color-2: hsla(4, 79%, 63%, 1);
+    --color-3: hsla(34, 75%, 80%, 1);
+    --color-text: #f0f1f2;
+    --color-bg: #14171B;
+    --color-border: #363a3f;
+    --color-gray-15: rgba(54, 58, 63, 0.7);
+    --color-gray-17: rgba(54, 58, 63, 0.5);
+    --color-glass-bg: rgba(255, 255, 255, 0.1); /* Glassy effect */
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.display-1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-1);
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-out;
+}
+
+.lead {
+    font-size: 18px;
+    color: var(--color-3);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.training-details, .registration-section, .payment-section {
+    margin-top: 30px;
+    background: var(--color-glass-bg);
+    padding: 30px;
+    weight:50%;
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Glassy blur effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-details:hover, .registration-section:hover, .payment-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+    text-align: left;
+    margin: auto;
+    max-width: 600px;
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: var(--color-gray-15);
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--color-text);
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: var(--color-2);
+}
+
+.paytm-qr {
+    width: 200px;
+    margin-top: 10px;
+    border: 2px solid var(--color-3);
+    padding: 5px;
+    border-radius: 10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
