@@ -5020,3 +5020,70 @@ html.no-csstransitions .s-hero__content {
         font-size: 1.4rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* Additional styles for manufacturing solution pages */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--vspace-1);
+    margin-top: var(--vspace-2);
+}
+
+.feature-card {
+    background-color: var(--color-gray-19);
+    border-radius: 8px;
+    padding: var(--vspace-1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--color-1);
+    margin-bottom: var(--vspace-0_75);
+}
+
+.feature-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--vspace-0_75);
+}
+
+.feature-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feature-list li {
+    color: var(--color-text);
+    padding: var(--vspace-0_25) 0;
+    position: relative;
+    padding-left: var(--vspace-1);
+}
+
+.feature-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-1);
+}
+
+@media screen and (max-width: 800px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
